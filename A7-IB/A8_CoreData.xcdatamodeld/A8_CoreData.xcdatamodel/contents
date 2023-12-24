@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryEntity" representedClassName="CategoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="courseCatID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="courseCatName" optional="YES" attributeType="String"/>
+        <relationship name="courses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CourseEntity"/>
+    </entity>
+    <entity name="CollegesEntity" representedClassName="CollegesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="collegeAddress" optional="YES" attributeType="String"/>
+        <attribute name="collegeID" optional="YES" attributeType="String"/>
+        <attribute name="collegeName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CourseEntity" representedClassName="CourseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="collegeID" optional="YES" attributeType="String"/>
+        <attribute name="courseCatID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="courseID" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="programID" optional="YES" attributeType="String"/>
+        <relationship name="colleges" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CollegesEntity"/>
+        <relationship name="courseCat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryEntity"/>
+        <relationship name="programs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProgramEntity"/>
+    </entity>
+    <entity name="ProgramEntity" representedClassName="ProgramEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="collegeID" optional="YES" attributeType="String"/>
+        <attribute name="programID" optional="YES" attributeType="String"/>
+        <attribute name="programName" optional="YES" attributeType="String"/>
+        <relationship name="colleges" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CollegesEntity"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CourseEntity"/>
+    </entity>
+</model>
