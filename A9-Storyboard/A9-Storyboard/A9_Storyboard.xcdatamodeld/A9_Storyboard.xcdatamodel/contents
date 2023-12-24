@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryEntity" representedClassName="CategoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryID" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="CollegeEntity" representedClassName="CollegeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="collegeAddress" optional="YES" attributeType="String"/>
+        <attribute name="collegeID" optional="YES" attributeType="String"/>
+        <attribute name="collegeName" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="CourseEntity" representedClassName="CourseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryID" optional="YES" attributeType="String"/>
+        <attribute name="collegeID" optional="YES" attributeType="String"/>
+        <attribute name="courseID" optional="YES" attributeType="String"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="programID" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProgramEntity" representedClassName="ProgramEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="collegeID" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="programID" optional="YES" attributeType="String"/>
+        <attribute name="programName" optional="YES" attributeType="String"/>
+    </entity>
+</model>
